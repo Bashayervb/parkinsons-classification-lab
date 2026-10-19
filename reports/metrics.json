@@ -1,0 +1,259 @@
+{
+  "seed": 42,
+  "input_sha256": "0c31fcc9ed65eb6e5badaa50c25ef9803b3f65a90f73e95b75aa6c4c60fafcfa",
+  "rows": 2105,
+  "columns": 35,
+  "missing_cells": 0,
+  "diagnosis_counts": {
+    "0": 801,
+    "1": 1304
+  },
+  "training_rows": 1684,
+  "test_rows": 421,
+  "training_positive_rate": 0.6193586698337292,
+  "test_positive_rate": 0.6199524940617577,
+  "versions": {
+    "sklearn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "selection_rule": "Highest mean training-only five-fold average precision; exclude dummy from selection.",
+  "threshold": 0.5,
+  "scenarios": {
+    "without_assessments_symptoms": {
+      "features": [
+        "Age",
+        "Gender",
+        "Ethnicity",
+        "EducationLevel",
+        "BMI",
+        "Smoking",
+        "AlcoholConsumption",
+        "PhysicalActivity",
+        "DietQuality",
+        "SleepQuality",
+        "FamilyHistoryParkinsons",
+        "TraumaticBrainInjury",
+        "Hypertension",
+        "Diabetes",
+        "Depression",
+        "Stroke",
+        "SystolicBP",
+        "DiastolicBP",
+        "CholesterolTotal",
+        "CholesterolLDL",
+        "CholesterolHDL",
+        "CholesterolTriglycerides"
+      ],
+      "feature_count": 22,
+      "cross_validation": {
+        "dummy": {
+          "ap": {
+            "mean": 0.6193584852338561,
+            "std": 0.0011597165199199154
+          },
+          "roc": {
+            "mean": 0.5,
+            "std": 0.0
+          },
+          "balanced": {
+            "mean": 0.5,
+            "std": 0.0
+          }
+        },
+        "logistic_regression": {
+          "ap": {
+            "mean": 0.6647373087733133,
+            "std": 0.0356988817543534
+          },
+          "roc": {
+            "mean": 0.5459601847879273,
+            "std": 0.03803065824573437
+          },
+          "balanced": {
+            "mean": 0.5120997445919034,
+            "std": 0.012896675518293113
+          }
+        },
+        "random_forest": {
+          "ap": {
+            "mean": 0.6416947862372717,
+            "std": 0.018767002364410586
+          },
+          "roc": {
+            "mean": 0.5268219353480312,
+            "std": 0.02633491308431296
+          },
+          "balanced": {
+            "mean": 0.49765709479219267,
+            "std": 0.007021819881920273
+          }
+        }
+      },
+      "selected_model": "logistic_regression",
+      "test": {
+        "accuracy": 0.5890736342042755,
+        "balanced_accuracy": 0.4871886973180077,
+        "precision": 0.6134020618556701,
+        "recall": 0.9118773946360154,
+        "specificity": 0.0625,
+        "f1": 0.7334360554699538,
+        "roc_auc": 0.5170019157088123,
+        "average_precision": 0.6242712372880941,
+        "confusion_matrix": [
+          [
+            10,
+            150
+          ],
+          [
+            23,
+            238
+          ]
+        ]
+      },
+      "baseline_test": {
+        "accuracy": 0.6199524940617577,
+        "balanced_accuracy": 0.5,
+        "precision": 0.6199524940617577,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "f1": 0.7653958944281525,
+        "roc_auc": 0.5,
+        "average_precision": 0.6199524940617577,
+        "confusion_matrix": [
+          [
+            0,
+            160
+          ],
+          [
+            0,
+            261
+          ]
+        ]
+      }
+    },
+    "all_non_identifier_features": {
+      "features": [
+        "Age",
+        "Gender",
+        "Ethnicity",
+        "EducationLevel",
+        "BMI",
+        "Smoking",
+        "AlcoholConsumption",
+        "PhysicalActivity",
+        "DietQuality",
+        "SleepQuality",
+        "FamilyHistoryParkinsons",
+        "TraumaticBrainInjury",
+        "Hypertension",
+        "Diabetes",
+        "Depression",
+        "Stroke",
+        "SystolicBP",
+        "DiastolicBP",
+        "CholesterolTotal",
+        "CholesterolLDL",
+        "CholesterolHDL",
+        "CholesterolTriglycerides",
+        "UPDRS",
+        "MoCA",
+        "FunctionalAssessment",
+        "Tremor",
+        "Rigidity",
+        "Bradykinesia",
+        "PosturalInstability",
+        "SpeechProblems",
+        "SleepDisorders",
+        "Constipation"
+      ],
+      "feature_count": 32,
+      "cross_validation": {
+        "dummy": {
+          "ap": {
+            "mean": 0.6193584852338561,
+            "std": 0.0011597165199199154
+          },
+          "roc": {
+            "mean": 0.5,
+            "std": 0.0
+          },
+          "balanced": {
+            "mean": 0.5,
+            "std": 0.0
+          }
+        },
+        "logistic_regression": {
+          "ap": {
+            "mean": 0.931166495195292,
+            "std": 0.014419100319987823
+          },
+          "roc": {
+            "mean": 0.8949185231365175,
+            "std": 0.01875929844674756
+          },
+          "balanced": {
+            "mean": 0.7937191193904015,
+            "std": 0.02123623374281789
+          }
+        },
+        "random_forest": {
+          "ap": {
+            "mean": 0.9565077238150594,
+            "std": 0.017796962415115483
+          },
+          "roc": {
+            "mean": 0.9452387748850368,
+            "std": 0.015536474932772945
+          },
+          "balanced": {
+            "mean": 0.8586509105567016,
+            "std": 0.02851103378625304
+          }
+        }
+      },
+      "selected_model": "random_forest",
+      "test": {
+        "accuracy": 0.9049881235154394,
+        "balanced_accuracy": 0.8870929118773947,
+        "precision": 0.8932384341637011,
+        "recall": 0.9616858237547893,
+        "specificity": 0.8125,
+        "f1": 0.9261992619926199,
+        "roc_auc": 0.9598659003831418,
+        "average_precision": 0.964498336230704,
+        "confusion_matrix": [
+          [
+            130,
+            30
+          ],
+          [
+            10,
+            251
+          ]
+        ]
+      },
+      "baseline_test": {
+        "accuracy": 0.6199524940617577,
+        "balanced_accuracy": 0.5,
+        "precision": 0.6199524940617577,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "f1": 0.7653958944281525,
+        "roc_auc": 0.5,
+        "average_precision": 0.6199524940617577,
+        "confusion_matrix": [
+          [
+            0,
+            160
+          ],
+          [
+            0,
+            261
+          ]
+        ]
+      }
+    }
+  },
+  "interpretation": "Synthetic educational dataset-label classification only, per publisher. No clinical validation or early-detection claim."
+}
